@@ -9,7 +9,7 @@ import path from 'path';
 import { parse } from 'csv-parse/sync';
 
 const app = express();
-const PORT = 4000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.use(cors());
 app.use(express.json());
