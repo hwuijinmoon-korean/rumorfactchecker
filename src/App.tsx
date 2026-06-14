@@ -631,7 +631,7 @@ const handleInvestmentSignal = async () => {
     setMessage('');
     setPageMode('investmentLoading');
 
-    const response = await fetch('http://localhost:4000/investment-signal', {
+    const response = await fetch('/investment-signal', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
