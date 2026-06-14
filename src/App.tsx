@@ -458,7 +458,7 @@ const [cacheLoading, setCacheLoading] = useState(false);
 
     console.log('requesting:', url);
 
-    const response = await fetch('http://localhost:4000/extract', {
+    const response = await fetch('/extract', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url }),
@@ -566,7 +566,7 @@ const handleBuildMarketCache = async () => {
     setCacheLoading(true);
     setMessage('');
 
-    const response = await fetch('http://localhost:4000/build-market-cache', {
+    const response = await fetch('/build-market-cache', {
       method: 'POST',
     });
 
@@ -595,7 +595,7 @@ const handleClusterAnalysis = async () => {
     setClusterLoading(true);
     setMessage('');
 
-    const response = await fetch('http://localhost:4000/cluster-analysis', {
+    const response = await fetch('/cluster-analysis', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
